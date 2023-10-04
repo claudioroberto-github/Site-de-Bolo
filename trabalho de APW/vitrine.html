@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vitrine</title>
+    <link rel="stylesheet" href="/style/vitrine.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+          crossorigin="anonymous" 
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/vitrine.js">
+</head>
+<body>
+    <!--Essa div é para o botão de CARRINHO do USUARIO-->
+
+    <div class="carrinho">
+        <h2>Carrinho: </h2>
+        <div id="carrinho">
+        </div>
+    </div>
+
+<br>
+    <div id="produtos">
+    </div>
+
+    <footer>
+    
+</footer>
+    <script>
+        const items = [{
+            id: 0,
+            nome: 'Bolo sabor Morango',
+            imagem: 'imagens/bolo.2.jpg',
+            quantidade: 0
+        },
+        {
+            id: 1,
+            nome: 'Bolo sabor chocolate',
+            imagem: 'imagens/foto do home.1.jpeg',
+            quantidade: 0
+        },{
+            id: 2,
+            nome: 'Cento de Salgado',
+            imagem: 'imagens/salgados.jpeg',
+            quantidade: 0},{
+            id: 3,
+            nome: 'Mousse de limão',
+            imagem: 'imagens/mousse-de-limao.jpg',
+            quantidade: 0
+        },
+        {
+            id: 4,
+            nome: 'Bolo sabor laranja',
+            imagem: 'imagens/bolo.4.jfif',
+            quantidade: 0
+        },{
+            id: 5,
+            nome: 'Cento de Salgado',
+            imagem: 'imagens/enroladinho.jfif',
+            quantidade: 0}
+    ]
+    inicializarLoja = () => {
+        var containerProdutos = document.getElementById('produtos');
+        items.map((val) =>{
+            containerProdutos.innerHTML += `
+            <div class="produto-single">
+                <img src="`+val.imagem+`" />
+                <p class="textoNome">`+val.nome+`</p>
+                <a class="btn" key = "`+val.id+`" href = "#">Adicionar ao Carrinho!<a/>
+            </div>
+            `;
+        })
+    }
+
+    inicializarLoja();
+
+    atualizarCarrinho = () =>{
+        var containerCarrinho = document.getElementById('carrinho');
+        containerCarrinho.innerHTML = "";
+        items.map((val) =>{
+            if(val.quantidade > 0)
+            containerCarrinho.innerHTML += `
+            <p>`+val.nome+` | `+val.quantidade+`</p>
+            <hr>
+            `;
+        })
+    }
+
+    var links = document.getElementsByTagName('a');
+
+    for(var i = 0; i < links.length; i++){
+        links[i].addEventListener("click",function() {
+            let key = this.getAttribute('key');
+            items[key].quantidade++;
+            atualizarCarrinho();
+            return false;
+        })
+
+    }
+    </script>
+</body>
+</html>

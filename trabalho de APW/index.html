@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/@media.css">
+    <link href="https://db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold" rel="folha de estilo">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!--Cabeçalho do Site-->
+    <header class="navbar">
+        <div class="navbar-left">
+            <img src="imagens/logo-removebg-preview.png" alt="">
+            <div>Home</div>
+            <div onclick="vitrine()">Vitrine</div>
+            <div>central de ajuda</div>
+        </div>
+        <div class="navbar-right">
+            <div class="sign-in"><button id="Login" onclick="login()">Sign In</button></div>
+            <div class="join-now"><button id="Registra-se" onclick="registrar()">Join Now</button></div>
+        </div>
+    </header>
+    <br>
+<!--Primeira caixa de IMAGEM DE BOLO-->
+<div class="container">
+    <div class="product"style="background-color: #1c3932;">
+        <div class="product-left boloCasamento" >
+            <img class="imagem" src="imagens/bolo.3.webp" 
+            alt="bolo de aniversário"
+            style="display: flex;"
+            />
+        </div>
+        <div class="product-right">
+            <div class="product-title">
+                <h3>Os melhores bolos para festas</h3>
+            </div>
+            <div class="product-despriction"></div>
+            <div class="product-button3"><button onclick="login()">Faça O Login Para Mais</button></div>
+        </div>
+    </div>
+</div>
+<br>
+<!--Segunda caixa de IMAGEM DE BOLO-->
+<div class="container">
+    <div class="product"style="background-color: #fa91aa;">
+
+        <div class="product-right">
+            <div class="product-title">
+                <h3>Para A Familia E Amigo, Trazendo Sempre Momentos Maravilhosos Para O Seu Dia</h3>
+            </div>
+            <div class="product-description">Bolos de qualidade e muito Carinho para voçê aproveita com quem voçê ama</div>
+            <div class="product-button2"><button onclick="vitrine()">Nossa Vitrine</button></div>
+        </div>
+        <div class="product-left" >
+            <img class="imagem" src="imagens/bolo.2.jpg" 
+            alt="bolo de aniversário"
+            style="display: block;"
+            />
+        </div>
+    </div>
+</div>
+<br>
+<!--Terceira caixa de IMAGEM DE BOLO-->
+<div class="container">
+    <div class="product"style="background-color: rgb(255, 36, 73);">
+        <div class="product-left" >
+            <img class="imagem" src="imagens/salgados.jpeg" 
+            alt="bolo de aniversário"
+            style="display: block;"
+            />
+        </div>
+        <div class="product-right">
+            <div class="product-title">
+                <h3>Salgados Gostosos E Crocantes Por Preço Baixo</h3>
+            </div>
+            <div class="product-description">Para ter as melhores festas, sempre os melhores salgados</div>
+            <div class="product-button"><button>Faça O Login Para Mais</button></div>
+        </div>
+    </div>
+</div>
+<!--Rosapé do site-->
+<footer class="rodape">
+    <h4>Feito Por Cláudio</h4>
+</footer>
+<script src="/src/main.js"></script>
+</body>
+</html>

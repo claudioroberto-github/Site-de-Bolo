@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco Cliente</title>
+    <link rel="stylesheet" href="/style/login.css">
+    <link rel="stylesheet" href="/style/@login.css">
+    <style>
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset style="border-radius: 10%;">
+            <legend><h1><b>Login</b></h1></legend>
+        <div class="tela">
+            
+            <input type="text" placeholder="Login" id="login" tabindex="0" required>
+            <br><br>
+            <input type="password" placeholder="Senha" id="senha" tabindex="0" required>
+            <br><br>
+            <input type="submit" id="botao" onclick="logar(); return false"> 
+            <br><br><br>
+            <div class="conta">
+                <h2>Não Tem Uma Conta? Clique Aqui ⬇</h2>
+                <button onclick="resumoregistrar()" id="botao" class="botaoregistrar"><b>Registrar-se</b></button>
+            </div>
+        </div>
+       
+    </fieldset>
+    </form> 
+
+</body>
+</html>
+
+
+    <script>
+        function logar() {
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if (login == "claudio" && senha == "1312319") {
+                location.href = "vitrine.html";
+            } else {
+                alert('Usuário ou Senha Incorretos.');
+            }
+        }
+        function resumoregistrar() {
+            window.location.href = "Registra-se.html";
+            alert("Coloque Seus Dados No Formulário.");
+        }
+    </script>
+    <script type="text/javascript" src="login.js"></script>
+    
